@@ -1,0 +1,201 @@
+/* Root variables Starts */
+:root {
+  --clr-primary-300: hsl(185, 75%, 39%);
+
+  --clr-secondary-400: hsl(227, 10%, 46%);
+  --clr-secondary-700: hsl(229, 23%, 23%);
+
+  --clr-neutral-200: hsl(0, 0%, 59%);
+
+  --fs-base: 18px;
+
+  --fw-normal: 400;
+  --fw-bold: 700;
+
+  --ff-base: "Kumbh Sans", sans-serif;
+}
+/* Root variable End */
+
+/****** Josh W Comeau reset starts******/
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+/* 3. Enable keyword animations */
+/* @media (prefers-reduced-motion: no-preference) {
+    html {
+      interpolate-size: allow-keywords;
+    }
+  } */
+
+body {
+  /* 4. Add accessible line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 6. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/*
+    10. Create a root stacking context
+  */
+/* #root, #__next {
+    isolation: isolate;
+  } */
+
+/****** Josh W Comeau reset End******/
+
+/* body styles starts */
+
+body {
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  background-color: var(--clr-primary-300);
+  font-family: var(--ff-base);
+  font-weight: var(--fw-normal);
+  font-size: calc(var(--fs-base) * 0.5);
+  color: var(--clr-neutral-200);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background: url("./images/bg-pattern-top.svg") no-repeat,
+    url("./images/bg-pattern-bottom.svg") no-repeat;
+  background-size: 100vw 100vw, 100vw 100vw;
+  background-position: top -40vw left -50vw, bottom -40vw right -50vw;
+  /* background-position: top -40% left -50%, bottom -40% right -50%; */
+}
+
+h1 {
+  color: var(--clr-secondary-700);
+}
+
+/* body styles End */
+
+/******* card style start ******/
+
+.profile {
+  display: grid;
+  grid-template-rows: 1fr 1.6fr;
+  border-radius: 1rem;
+  overflow: hidden;
+  width: 325px;
+  z-index: 10px;
+  box-shadow: 0px 5px 50px 1px hsl(from var(--clr-secondary-700) h s l/0.2);
+}
+
+/* image container */
+.profile__img {
+  display: grid;
+  justify-content: center;
+  align-items: end;
+  background-image: url(./images/bg-pattern-card.svg);
+}
+
+/* image style */
+.profile__img img {
+  border-radius: 50%;
+  border: 0.4rem solid white;
+  transform: translate(0px, 50%);
+}
+
+/* Profile name and Age, Location */
+.profile__content {
+  padding: 2rem;
+  padding-top: 3rem;
+  background-color: white;
+}
+.profile__content__details {
+  display: grid;
+  gap: 0.4rem;
+  padding: 1rem;
+}
+.profile__content__details span {
+  font-weight: var(--fw-normal);
+  color: var(--clr-neutral-200);
+}
+
+.profile__content__details p {
+  font-size: calc(var(--fs-base) * 0.8);
+}
+
+/* Profile Stats Followers, Likes and Photos */
+.profile__content__stats {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding-top: 1rem;
+  border-top: 1px solid hsl(from var(--clr-primary-300) h s l/0.2);
+}
+
+.profile__content__stats p {
+  font-size: calc(var(--fs-base) * 0.6);
+  letter-spacing: 1px;
+}
+
+/****** card style End ******/
+
+/* Media Queries starts */
+@media (min-width: 600px) {
+  main {
+    background-size: 75vw 75vw, 75vw 75vw;
+    background-position: top -40vw left -24vw, bottom -42vw right -22vw;
+  }
+  .profile {
+    min-width: 355px;
+  }
+}
