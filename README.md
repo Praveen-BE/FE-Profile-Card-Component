@@ -9,10 +9,10 @@ This is a solution to the [Profile card component challenge on Frontend Mentor](
   - [Screenshot](#screenshot)
   - [Links](#links)
 - [My process](#my-process)
+
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
+
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
@@ -24,12 +24,18 @@ This is a solution to the [Profile card component challenge on Frontend Mentor](
 
 ### Screenshot
 
-![](./screenshot.jpg)
+- Destop view
+
+![](./solutionImages/Screenshot%202025-04-24%20at%2021-10-51%20Frontend%20Mentor%20Profile%20card%20component.png)
+
+- Mobile View
+
+![](./solutionImages/Screenshot%202025-04-24%20at%2021-11-07%20Frontend%20Mentor%20Profile%20card%20component.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [FE-Profile-Card-Component](https://github.com/Praveen-BE/FE-Profile-Card-Component)
+- Live Site URL: [FE-Profile-Card-Component](https://praveen-be.github.io/FE-Profile-Card-Component/)
 
 ## My process
 
@@ -43,20 +49,19 @@ This is a solution to the [Profile card component challenge on Frontend Mentor](
 
 ### What I learned
 
-### Continued development
+i strugle to set two background image, i get from other frontend mentor members github code from discord community.
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-### Useful resources
-
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+```css
+background: url("./images/bg-pattern-top.svg") no-repeat, url("./images/bg-pattern-bottom.svg")
+    no-repeat;
+background-size: 100vw 100vw, 100vw 100vw;
+background-position: top -40vw left -50vw, bottom -40vw right -50vw;
+```
 
 ## Author
 
-<!-- - Website - [Add your name here](https://www.your-site.com) -->
-
 - Frontend Mentor - [Praveen-BE](https://www.frontendmentor.io/profile/Praveen-BE)
-<!-- - Twitter - [@yourusername](https://www.twitter.com/yourusername) -->
 
 ## Acknowledgments
+
+- Frontend Mentors Discord Community.
